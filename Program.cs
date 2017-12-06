@@ -81,7 +81,7 @@ namespace Dejkstra
                     {
                         if (!used[index] && (lengths[index] > lengths[from] + weights[from, index]))
                         {
-                            lengths[index] = lengths[from] = weights[from, index];
+                            lengths[index] = lengths[from] + weights[from, index];
                             paths[index] = from;
                         }
                     }
